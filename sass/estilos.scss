@@ -6,241 +6,473 @@
     list-style: none;
     }
 
-    $color1: #5000F5;
-    $color2: #FDBE2D;
-    $color3: #ffff;
+    html{
+    scroll-behavior: smooth;
+    } 
+
+    // $color1: #5000F5;
+    // $color2: #FDBE2D;
+    // $color3: #ffff;
+    // $color4: #000;
+
+    $paleta: (
+        "color1": #5000F5,
+        "color2": #FDBE2D,
+        "color3": #ffff,
+        "color4": #000
+    );
 
     .contenedor-grid{
         display: grid;
         min-height: 100vh;
+        width: 100%;
     }
+    // Inicio Header
     .header{
-        background-color: $color2;
         padding: 20px;
+        height: 120px;
+        background-color: map-get($map: $paleta, $key: "color4");
+        background-position: top;
         .logo{
-                padding: 6px;
-        }
-        .logo:hover{
-                transition: all 2s;
-                width: 225px;
-                height: auto;
+                height: 40px;
+                width: auto;
+                padding: 6px 6px;
+                margin-left: 20px;
         }
         nav{
+            height: 100px;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            overflow: hidden;
-        }
-        nav ul li a:hover{
-            color: $color3;
-            transition: all .2s;
         }
     }
     .nav-menu{
         position: fixed;
-        right: 0px;
-        top: 97px;
+        top: 120px;
+        right: 0;
         width: 100%;
+        height: 0;
         text-align: center;
-        transition: all .5s;
+        transition: all .2s;
+        background-color: map-get($map: $paleta, $key: "color2");
+        z-index: 1;
     }
     .nav-menu ul{
-        background-color: $color2;
         width: 100%;
         height: auto;
     }
     .nav-menu li{
         display: none;
-        margin-top: 18px;
-        margin-right: 10px;
-        transition: all .5s;
+        line-height: 28px;
+        margin: 50px 0;
+        transition: all .3s;
     }
     .nav-menu li a{
-        color: $color1;
-        font-size: 16px;
-        font-weight: 700;
+        color: map-get($map: $paleta , $key: "color1" ) !important;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
         font-family: 'Baloo 2', cursive;
-        display: inline-block;
+    }
+    .nav-menu li a.active, .nav-menu li a:hover {
+        color: map-get($map: $paleta , $key: "color3" ) !important;
+        transition: 0,5s;
     }
     #check{
         display: none;
     }
     #check:checked ~ .nav-menu{
-        height: 60vh;
+        height: 100vh;
     }
     #check:checked ~ .nav-menu li{
         display: block;
     }
     .bar-btn{
-        font-size: 35px;
-        margin-right: 25px;
-        margin-top: 20px;
-        color: $color1;
+        font-size: 25px;
+        margin-right: 20px;
+        color: map-get($map: $paleta , $key: "color2" );
         cursor: pointer;
     }
-    main{
-        background-color: $color1;
+    // Fin Header
+    // Inicio Main
+    @mixin sizes ($foto){
+        background-image: $foto;
+    }
         
+    .main{
+        @include sizes(url(../multimedia/showing-tablet-s-blank-screen\ \(1\).jpg));
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: auto;
+        background-color: map-get($map: $paleta, $key: "color1");  
+    
         h1{
-        font-size: 27px;
+        font-size: 25px;
         font-family:'Baloo 2', cursive;
-        font-weight: bold;
-        color: $color3;
+        color: map-get($map: $paleta , $key: "color3");
         display: flex;
         justify-content: center;
-        padding: 10px;
-        margin-top: 30px;
+        text-align: center;
+        margin-top: 20px;
+        text-shadow: 2px 2px 1px black;
+        padding-right: 20px;
+        padding-left: 20px;
         }  
-        p{
-        font-size: 18px;
-        font-family:'Baloo 2', cursive;
-        text-align: justify;
-        color:$color2;
+        div{
         display: flex;
         justify-content: center;
-        padding: 30px;
+        padding-top: 10px;
+        }
+        .logoTitulo{
+        margin-top: 80px;
+        height: 120px;
+        width: auto;
+        }
+        .boxParrafo{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+        }
+        p{
+        font-size: 16px;
+        font-family:'Baloo 2', cursive;
+        text-align: center !important;
+        color:map-get($map: $paleta , $key: "color3" ) !important;
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-shadow: 2px 2px 1px black;
         }    
-    }  
+    } 
+    .mainDiseñoWeb{
+        @include sizes(url(../multimedia/ideas-concept-on-laptop-screen.jpg));
+        @extend .main;
+        p{
+            padding-bottom: 40px;
+        }
+    }    
+    .mainDiseñoGrafico{
+        @include sizes(url(../multimedia/man-editing-photos-on-computer.jpg));
+        @extend .main;
+        p{
+            padding-bottom: 40px;
+        }
+    }
+    .mainCm{
+        @extend .main;
+        background-image: none;
+        h1{
+            padding-top: 40px;
+        }
+        p{
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+    }
+    // Fin Main 
+    // Inicio Section Servicios
+    .servicios{
+        height: auto;
+        width: 100%;
+        background-color: map-get($map: $paleta, $key: "color1");
+        font-size: 20px;
+        font-family:'Baloo 2', cursive;
+        font: bold;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 90px 90px 90px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .botones{
+        background-color: map-get($map: $paleta , $key: "color2" );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: map-get($map: $paleta , $key: "color4" );
+        margin: 10px 30px;
+        border-radius: 10px;
+        filter: opacity(90%);
+        }
+
+    .botones:hover{
+        transform: scale(101%);
+        filter: none;
+        }
+    }
+    .servicioDiseñoWeb{
+        h1{
+            font-size: 24px;
+            font-family:'Baloo 2', cursive;
+            font-weight: bold;
+            text-align: center;
+            padding: 40px;
+            background-color: map-get($map: $paleta , $key: "color1");
+            color: map-get($map: $paleta , $key: "color2" );
+        }
+        .serviciosDiseñoWeb{
+            background-color: map-get($map: $paleta , $key: "color1");
+            color: map-get($map: $paleta , $key: "color2");
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 90px 90px 90px 90px 90px;
+            padding: 30px;
+        h2{
+            font-size: 20px;
+            font-family:'Baloo 2', cursive;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            padding-top: 25px;
+        }
+        p{
+            font-size: 18px;
+            font-family:'Baloo 2', cursive;
+            text-align: right;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        }
+    }
+    .servicioDiseñoGrafico{
+            background-color: map-get($map: $paleta , $key: "color1");
+        .serviciosDiseñoGrafico{
+            background-color: map-get($map: $paleta , $key: "color1");
+            color: map-get($map: $paleta , $key: "color2");
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 90px 90px 90px 90px 90px 90px;
+            padding: 30px;
+        h2{
+            font-size: 20px;
+            font-family:'Baloo 2', cursive;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            padding-top: 25px;
+        }
+        p{
+            font-size: 18px;
+            font-family:'Baloo 2', cursive;
+            text-align: right;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        }
+    }
+    
+    .servicioCm{
+        @include sizes(url(../multimedia/people-holding-social-media-icons.jpg));
+        background-position: center;
+        background-size: cover;
+        padding-top: 300px;
+
+            .serviciosCm{
+                color: map-get($map: $paleta , $key:"color3") !important;
+                background-color: map-get($map: $paleta , $key: "color1");
+                opacity: 80%;
+                padding: 30px;
+                height: 300px;
+                width: 100%;
+
+                    h2{
+                    font-size: 20px;
+                    font-family:'Baloo 2', cursive;
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 10px;
+                    padding-top: 25px;
+                    }
+
+                    p{
+                    font-size: 18px;
+                    font-family:'Baloo 2', cursive;
+                    text-align: center;
+                    padding-bottom: 50px;
+                    }
+            }
+    }
+    
+    .servicioPh{
+        @include sizes(url(../multimedia/young-female-product-photographer-in-studio.jpg));
+        background-position: center;
+        background-size: cover;
+        padding-top: 300px;
+
+            .serviciosPh{
+                color: map-get($map: $paleta , $key:"color3") !important;
+                background-color: map-get($map: $paleta , $key: "color1");
+                opacity: 80%;
+                padding: 30px;
+                height: 300px;
+                width: 100%;
+
+                    h2{
+                    font-size: 20px;
+                    font-family:'Baloo 2', cursive;
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 10px;
+                    padding-top: 25px;
+                    }
+
+                    p{
+                    font-size: 18px;
+                    font-family:'Baloo 2', cursive;
+                    text-align: center;
+                    padding-bottom: 50px;
+                    }
+            }
+    }
+//     // Fin Section Servicios
+//     // Inicio Section Consultas
     .consultas{
         h2{
             font-size: 24px;
             font-family:'Baloo 2', cursive;
             font-weight: bold;
-            color:$color3;
-            background-color: $color1;
+            color:map-get($map: $paleta , $key: "color3");
+            background-color: map-get($map: $paleta , $key: "color1");
             display: flex;
             justify-content: center;
-            padding: 10px;
             padding-top: 16px;
         }
         .formulario{
             display: flex;
             justify-content: center;
-            padding: 35px;
             font-family:'Baloo 2', cursive;
             text-align: left;
-            color: $color2;
-            background-color: $color1
+            color: map-get($map: $paleta , $key: "color2");
+            background-color: map-get($map: $paleta , $key: "color1");
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+        .form{
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     }
-    #b {
-        background-color: $color1;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: span 1;
-        grid-template-areas: "contacto";
-        position: relative;
-    }
+    // Fin Section Consultas
+    // Inicio Section Contacto
     .contacto {
+        display: flex;
+        flex-direction: column;
         h2{
         font-size: 24px;
         font-family:'Baloo 2', cursive;
         font-weight: bold;
-        color:$color3;
-        background-color: $color1;
+        color:map-get($map: $paleta , $key: "color3");
+        background-color: map-get($map: $paleta , $key: "color1");
         display: flex;
         justify-content: center;
         padding: 10px;
-        padding-top: 16px;
         }
         .contactos{
-        display: grid;
-        justify-content: center;
-        padding: 35px;
+        padding: 5px;
         font-family:'Baloo 2', cursive;
         text-align: left;
-        color: $color2;
-        background-color: $color1;
-        grid-area: contacto;
+        color: map-get($map: $paleta , $key: "color2");
+        background-color: map-get($map: $paleta , $key: "color1");
         }
-    }
-    .contactos {
         .tel-mail{
-            display: grid;
-            justify-content: center;
-            color: $color2;
-        }
-        a{
-            font-size: 16px;
-            font-family:'Baloo 2', cursive;
-            color:#FDBE2D;
-            display: flex;
-            justify-content: center;
-            padding: 5px;
-            text-align: center;
-            padding-bottom: 26px;
-            animation: flash;
-            animation-duration: 2s;
-            animation-delay: 6s;
-        } 
-        i{
-            font-size: 19px;
-            color:#FDBE2D;
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-    }
-    .oficinas{
-        background-color: $color1;
-        display: flex;
-        flex-direction: column;
-   
-        h2{
-        font-size: 24px;
-        font-family:'Baloo 2', cursive;
-        font-weight: bold;
-        color:$color3;
         display: flex;
         justify-content: center;
-        padding-bottom: 50px;
-        padding-top: 15px;
-        display: flex;
-        justify-content: center;
-        }
-        .mapa{
-        width: 300px;
-        height: 200px;
-        padding-bottom: 40px;
+        color: map-get($map: $paleta , $key: "color2");
+        font-size: 17px;
+        margin-bottom: 8px;
         }
     }
-    .footer{
-        background-color: $color2;
-        font-size: 22px;
+    // Fin Section Contacto
+    // Inicio Section Botón Whatsapp
+    .botonWhatsapp{
+        background-color: map-get($map: $paleta , $key: "color1");
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
-        
+        .call{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-family:'Baloo 2', cursive;
+            color: map-get($map: $paleta , $key: "color3");
+            background-color: rgb(16, 231, 16);
+            width: 250px;
+            border-radius: 20px;
+            margin-top: 50px;
+            margin-bottom: 70px;
+        }
         a{
-            color: $color1;
-            letter-spacing: 20px;
+            color: map-get($map: $paleta , $key: "color3");
+            padding: 6px;
+        }
+        i{
+            font-size: 27px;
+            padding: 6px;
+        }
+    }    
+    // Fin Section Botón Whatsapp
+    // Inicio Botón Arriba
+    .botonArriba{
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 20px;
+        right: 20px;
+        color: map-get($map: $paleta , $key: "color1");
+        height: 22px;
+        width: 22px;
+        background-color: map-get($map: $paleta , $key: "color2");
+        border-radius: 50%;
+        font-size: 20px;
+        filter: opacity(80%);
+    }    
+    // Fin Botón Arriba
+    // Inicio Footer
+    .footer{
+        background-color: map-get($map: $paleta , $key: "color4");
+        font-size: 14px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .redes{
+            display: flex;
+            justify-content: center;
         } 
+        a{
+            color: map-get($map: $paleta , $key: "color2");
+            font-size: 16px;
+            padding-right: 10px;
+            padding-left: 10px;
+        }      
         i:hover{
         transform: scale(1.15);
         }
-        .nuestrasRedes{
-            font-size: 19px;
+        .textoFooter{
             font-family:'Baloo 2', cursive;
-            font-weight: bold;
-            color:$color1;
+            color:map-get($map: $paleta , $key: "color2");
             display: flex;
             justify-content: center;
-            padding: 5px;
-            margin-top: 5px;
-            padding-right: 20px;
             }
+        .copy{
+            margin-top: 20px;
+        }    
         }
-    @media (min-width: 768px){
+    // Fin Footer
+    // Inicio Responsive Desktop
+    @media (min-width: 1024px){
         .contenedor-grid{
             display: grid;
             min-height: 100vh;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 120px auto auto 80px;
-            grid-template-areas: "header header header"
-                                 "main main main"
-                                 "uno dos tres"
-                                 "footer footer footer";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 120px auto auto auto 120px;
+            grid-template-areas: "header header" "main main" "servicios servicios" "consultas contacto" "footer footer";
         }
         .header{
             grid-area: header;
@@ -248,74 +480,178 @@
         .main{
             grid-area: main;
             }
-        #a{
-            grid-area: uno;
+        .servicios{
+            grid-area: servicios;
         }
-        #b{
-            grid-area: dos;
+        .servicioDiseñoWeb{
+            grid-area: servicios;
         }
-        #c{
-            grid-area: tres;
+        .servicioDiseñoGrafico{
+            grid-area: servicios;
+        }
+        .servicioCm{
+            grid-area: servicios;
+        }
+        .servicioPh{
+            grid-area: servicios;
+        }
+        .consultas{
+            grid-area: consultas;
+        }
+        .contacto{
+            grid-area: contacto;
         }
         .footer{
             grid-area: footer;
             }
+
         .logo{
-            width: 220px;
-            height: auto;
+            width: 180px !important;
+            height: auto !important;
+            margin-left: 80px;
+        }
+        nav {
+            height: 100px;
         }
         .bar-btn{
             display: none;
         }
         .nav-menu{
             position: relative;
-            height: 50px;
-            width: 500px;
-            top: 20px;
-            right: 38px;
+            height: 100px;
+            top: 0;
             background: none;
             transition: none;
             text-align: right;
-            display: inline-block;
-            padding-left: 60px;
-        }
-        .nav-menu ul{
-            display: flex;
-            flex-direction: row;
-            line-height: 12px;
-            overflow: hidden;
-            width: 700px;
             margin-right: 20px;
-            background-color: $color2;
         }
         .nav-menu li{
             display: inline-block;
+            line-height: 100px;
+            margin: 0 20px;
             transition: none;
         }
         .nav-menu li a{
-            color: $color1;
-            font-size: 14px;
-            font-weight: 700;
+            font-size: 16px !important;
             font-family: 'Baloo 2', cursive;
-            display: inline-block;
+            padding: 7px 2px;
+            text-transform: uppercase;
+            color: map-get($map: $paleta , $key: "color2") !important;
         }
-        main p{
-            font-size: 18px;
-            font-family:'Baloo 2', cursive;
-            text-align: justify;
-            color:$color2;
+        .main {
+            p{
+                font-size: 18px;
+                font-family:'Baloo 2', cursive;
+                text-align: justify;
+                color:map-get($map: $paleta , $key: "color2");
+                display: flex;
+                justify-content: center;
+                padding-right: 200px;
+                padding-left: 200px;
+            } 
+        }
+        
+        .contacto{
+            background-color: map-get($map: $paleta , $key: "color1");
+            .tel-mail{
+                font-size: 20px;
+                }
+        } 
+
+        .servicios{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 90px 90px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+    
+            .botones{
+            background-color: map-get($map: $paleta , $key: "color2");
             display: flex;
             justify-content: center;
-            padding-right: 108px;
-            padding-left: 108px;
-        }  
-    }
-    @media (min-width: 920px){
-        .nav-menu li a{
-            color: $color1;
-            font-size: 14px;
-            font-weight: 700;
-            font-family: 'Baloo 2', cursive;
-            display: inline-block;
+            align-items: center;
+            color: map-get($map: $paleta , $key: "color4");
+            margin: 10px 30px;
+            border-radius: 10px;
+            filter: opacity(90%);
+            }
+        }
+        .botonArriba{
+            height: 30px;
+            width: 30px;
+        }    
+
+        .footer{
+            font-size: 15px;
+            a{
+                font-size:20px;
+            }      
+        }
+        .servicioDiseñoWeb{
+            h1{
+                font-size: 30px;
+                font-family:'Baloo 2', cursive;
+                font-weight: bold;
+                text-align: center;
+                padding: 100px;
+                background-color: map-get($map: $paleta , $key: "color1");
+                color: map-get($map: $paleta , $key: "color2");
+                display: flex;
+                justify-content: center;
+            }
+            .serviciosDiseñoWeb{
+                background-color: map-get($map: $paleta , $key: "color1");
+                color: map-get($map: $paleta , $key: "color2");
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 200px 200px 200px;
+                padding: 30px;
+            h2{
+                font-size: 20px;
+                font-family:'Baloo 2', cursive;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 25px;
+            }
+            p{
+                font-size: 18px;
+                font-family:'Baloo 2', cursive;
+                text-align: left !important;
+                text-align: center;
+                padding-right: 300px;
+            }
+            }
+        }
+        .servicioDiseñoGrafico{
+            background-color: map-get($map: $paleta , $key: "color1");
+            padding-top: 100px;
+            padding-bottom: 100px;
+        .serviciosDiseñoGrafico{
+            background-color: map-get($map: $paleta , $key: "color1");
+            color: map-get($map: $paleta , $key: "color2");
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 200px 200px 200px 200px 200px;
+            padding: 30px;
+        h2{
+            font-size: 30px;
+            font-family:'Baloo 2', cursive;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            padding-top: 25px;
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            font-size: 20px;
+            font-family:'Baloo 2', cursive;
+            text-align: left;
+            padding-right: 300px;
+            display: flex;
+            align-items: center;
+        }
         }
     }
+}
+    // Fin Responsive Desktop

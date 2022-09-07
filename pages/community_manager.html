@@ -4,60 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../multimedia/tecbis_logotipo.png" type="image/x-icon">
+    <meta name="description" content="¿Qué es el community management? Nuestros servicios e información de contacto">
+    <meta name="keywords" content="community manager instagram precio, community manager para instagram">
+    <link rel="shortcut icon" href="../multimedia/logotipo_perfil.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/484fb7870b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Community Manager</title>
 </head>
 <body>
     <section class="contenedor-grid">
-        <header class="header">
-           <nav>
-               <div>
-                   <img src="../multimedia/tecbis_logo.png" alt="logo_tecbis" width="250" height="auto" class="logo">
-               </div>
-               <input type="checkbox" id="check">
-               <label for="check" class="bar-btn">
-                <i class="fa-solid fa-bars"></i>
-               </label>
-               <div class="nav-menu">
-               <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./fotografía.html">Fotografía</a></li>
-                <li><a href="./diseño_web.html">Diseño Web</a></li>
-                <li><a href="./diseño_gráfico.html">Diseño Gráfico</a></li>
-                <li><a href="#">Community Manager</a></li>
-               </ul> 
-               </div>
+        <header class="header" id="arriba">
+            <nav>
+                <div>
+                    <img src="../multimedia/tecbis_logo2.png" alt="logo_tecbis" width="250" height="auto" class="logo">
+                </div>
+                <input type="checkbox" id="check">
+                <label for="check" class="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./diseño_web.html">Diseño Web</a></li>
+                        <li><a href="./diseño_gráfico.html">Diseño Gráfico</a></li>
+                        <li><a href="#" class="active">Community Manager</a></li>
+                        <li><a href="./fotografía.html">Fotografía</a></li>
+                    </ul> 
+                </div>
             </nav>
         </header>
-        <main class="main">
+        <main class="mainCm">
             <h1>Community Manager</h1>
-            <p>Con la creciente tendencia de las redes sociales, su empresa no puede permanecer indiferente y tiene que hacerse presente en éste nuevo terreno de negocios. Lo acompañamos en el trayecto, generando contenido, administrando y gestionando sus cuentas de Facebook, Instagram, Linkedin, etc, generando movimiento tanto en su sitio web cómo en su local físico, atrayendo nuevos clientes y mejorando su imagen corporativa.</p>
+            <p> 
+                Hacemos que su negocio tenga presencia en el mundo de las redes sociales. Administramos y gestionamos sus cuentas, generando movimiento en su local y en su página web. Atraiga nuevos clientes y mejore su imagen corporativa.
+            </p>
         </main>
-        <section id="uno">
-            <div class="cm1"></div>
+        <section class="servicioCm">
+            <div class="serviciosCm">
+                <h2>Asesoramiento en Gestión de Redes Sociales</h2>
+                <p>
+                    Community management, marketing digital y diseño gráfico. Generamos y creamos los perfiles en las diferentes redes y diagramamos la puesta en marcha. Planes mensuales a la medida de su negocio. 
+                </p>
+            </div>
         </section>
-        <section id="dos">
-            <div class="contacto">
+        <section class="contacto">
             <h2>Contacto</h2>
-            <div class="tel">+543435025077</div>
-            <div class="email">tecbis@gmail.com</div>
+            <div class="contactos">
+                <a class="tel-mail" href="tel:+543435025077" >+543435025077</a>
+                <a class="tel-mail" href="mailto:somostecbis@gmail.com" >somostecbis@gmail.com</a>        
             </div>
-            <div class="call">
-            <i class="fa-brands fa-whatsapp"></i>
-            <a href="https://api.whatsapp.com/send?phone=3435025077&text=TecBis" target="_blank" class="enlaces wtsapp">Consulta por planes a tu medida
-            </a>
-            </div>
+            <section class="botonWhatsapp">
+                <div class="call">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://api.whatsapp.com/send?phone=3435025077&text=TecBis" target="_blank">
+                    Planes Personalizados
+                    </a>
+                </div> 
+            </section>
         </section>
-        <section id="tres">
-            <div class="cm2"></div>
+        <section class="consultas">
+            <h2>Envianos tu Consulta</h2>
+            <div class="formulario">
+            <form>
+                <label for="Nombre">Nombre</label>
+                <input type="text" name="Nombre" required class="form"><br> 
+                <label for="Apellido">Apellido</label>
+                <input type="text" name="Apellido" required class="form"><br>
+                <label for="E-mail">E-mail</label>
+                <input type="email" name="E-mail" required class="form"><br>
+                <label for="Teléfono">Teléfono</label>
+                <input type="tel" name="Teléfono" required class="form"><br>
+                <label for="Mensaje">Mensaje</label> 
+                <br><textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Tu Consulta Aqui"></textarea><br>
+                <input type="submit">
+                <input type="reset">
+                </form>  
+            </div>  
         </section>
+        <a href="#arriba" class="botonArriba"><i class="fa-sharp fa-solid fa-angle-up"></i></a>
         <footer class="footer">
-            <div class="nuestrasRedes">Seguinos!</div>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>     
-            <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <div class="textoFooter">Seguinos!</div>
+            <div class="redes">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>     
+                <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="textoFooter copy">© Copyright TECBIS 2022</div>
         </footer>
     </section>
 </body>
