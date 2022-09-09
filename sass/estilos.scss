@@ -101,7 +101,7 @@
     }
         
     .main{
-        @include sizes(url(../multimedia/showing-tablet-s-blank-screen\ \(1\).jpg));
+        @include sizes(url("../multimedia/showing-tablet-s-blank-screen\ \(1\).jpg"));
         background-position: left;
         background-size: cover;
         background-repeat: no-repeat;
@@ -148,14 +148,14 @@
         }    
     } 
     .mainDiseñoWeb{
-        @include sizes(url(../multimedia/ideas-concept-on-laptop-screen.jpg));
+        @include sizes(url("../multimedia/ideas-concept-on-laptop-screen.jpg"));
         @extend .main;
         p{
             padding-bottom: 40px;
         }
     }    
     .mainDiseñoGrafico{
-        @include sizes(url(../multimedia/man-editing-photos-on-computer.jpg));
+        @include sizes(url("../multimedia/man-editing-photos-on-computer.jpg"));
         @extend .main;
         p{
             padding-bottom: 40px;
@@ -183,7 +183,8 @@
         font: bold;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 90px 90px 90px 90px;
+        // grid-template-rows: 90px 90px 90px 90px;
+        grid-auto-rows: 90px;
         padding-top: 30px;
         padding-bottom: 30px;
 
@@ -218,7 +219,8 @@
             color: map-get($map: $paleta , $key: "color2");
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 90px 90px 90px 90px 90px;
+            // grid-template-rows: 90px 90px 90px 90px 90px;
+            grid-auto-rows: 90px;
             padding: 30px;
         h2{
             font-size: 20px;
@@ -244,7 +246,8 @@
             color: map-get($map: $paleta , $key: "color2");
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 90px 90px 90px 90px 90px 90px;
+            // grid-template-rows: 90px 90px 90px 90px 90px 90px;
+            grid-auto-rows: 90px;
             padding: 30px;
         h2{
             font-size: 20px;
@@ -265,7 +268,7 @@
     }
     
     .servicioCm{
-        @include sizes(url(../multimedia/people-holding-social-media-icons.jpg));
+        @include sizes(url("../multimedia/people-holding-social-media-icons.jpg"));
         background-position: center;
         background-size: cover;
         padding-top: 300px;
@@ -297,7 +300,7 @@
     }
     
     .servicioPh{
-        @include sizes(url(../multimedia/young-female-product-photographer-in-studio.jpg));
+        @include sizes(url("../multimedia/young-female-product-photographer-in-studio.jpg"));
         background-position: center;
         background-size: cover;
         padding-top: 300px;
@@ -604,7 +607,8 @@
                 color: map-get($map: $paleta , $key: "color2");
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 200px 200px 200px;
+                // grid-template-rows: 200px 200px 200px;
+                grid-auto-rows: 200px;
                 padding: 30px;
             h2{
                 font-size: 20px;
@@ -631,7 +635,8 @@
             color: map-get($map: $paleta , $key: "color2");
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 200px 200px 200px 200px 200px 200px;
+            // grid-template-rows: 200px 200px 200px 200px 200px 200px;
+            grid-auto-rows: 200px;
             padding: 30px;
         h2{
             font-size: 30px;

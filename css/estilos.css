@@ -94,7 +94,7 @@ html {
 }
 
 .main, .mainCm, .mainDiseñoGrafico, .mainDiseñoWeb {
-  background-image: url(../multimedia/showing-tablet-s-blank-screen\ \(1\).jpg);
+  background-image: url("../multimedia/showing-tablet-s-blank-screen (1).jpg");
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -141,14 +141,14 @@ html {
 }
 
 .mainDiseñoWeb {
-  background-image: url(../multimedia/ideas-concept-on-laptop-screen.jpg);
+  background-image: url("../multimedia/ideas-concept-on-laptop-screen.jpg");
 }
 .mainDiseñoWeb p {
   padding-bottom: 40px;
 }
 
 .mainDiseñoGrafico {
-  background-image: url(../multimedia/man-editing-photos-on-computer.jpg);
+  background-image: url("../multimedia/man-editing-photos-on-computer.jpg");
 }
 .mainDiseñoGrafico p {
   padding-bottom: 40px;
@@ -174,7 +174,7 @@ html {
   font: bold;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 90px 90px 90px 90px;
+  grid-auto-rows: 90px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -207,7 +207,7 @@ html {
   color: #FDBE2D;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 90px 90px 90px 90px 90px;
+  grid-auto-rows: 90px;
   padding: 30px;
 }
 .servicioDiseñoWeb .serviciosDiseñoWeb h2 {
@@ -234,7 +234,7 @@ html {
   color: #FDBE2D;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 90px 90px 90px 90px 90px 90px;
+  grid-auto-rows: 90px;
   padding: 30px;
 }
 .servicioDiseñoGrafico .serviciosDiseñoGrafico h2 {
@@ -254,7 +254,7 @@ html {
 }
 
 .servicioCm {
-  background-image: url(../multimedia/people-holding-social-media-icons.jpg);
+  background-image: url("../multimedia/people-holding-social-media-icons.jpg");
   background-position: center;
   background-size: cover;
   padding-top: 300px;
@@ -283,7 +283,7 @@ html {
 }
 
 .servicioPh {
-  background-image: url(../multimedia/young-female-product-photographer-in-studio.jpg);
+  background-image: url("../multimedia/young-female-product-photographer-in-studio.jpg");
   background-position: center;
   background-size: cover;
   padding-top: 300px;
@@ -570,7 +570,7 @@ html {
     color: #FDBE2D;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px 200px;
+    grid-auto-rows: 200px;
     padding: 30px;
   }
   .servicioDiseñoWeb .serviciosDiseñoWeb h2 {
@@ -597,7 +597,7 @@ html {
     color: #FDBE2D;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    grid-auto-rows: 200px;
     padding: 30px;
   }
   .servicioDiseñoGrafico .serviciosDiseñoGrafico h2 {
