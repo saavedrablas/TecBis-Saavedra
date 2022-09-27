@@ -11,6 +11,16 @@ html {
   scroll-behavior: smooth;
 }
 
+h1 {
+  animation: fadeInUp;
+  animation-duration: 2s;
+}
+
+.logoTitulo {
+  animation: fadeInUp;
+  animation-duration: 1s;
+}
+
 .contenedor-grid {
   display: grid;
   min-height: 100vh;
@@ -20,7 +30,7 @@ html {
 .header {
   padding: 20px;
   height: 120px;
-  background-color: #000;
+  background-color: #0A090C;
   background-position: top;
 }
 .header .logo {
@@ -70,7 +80,7 @@ html {
 }
 
 .nav-menu li a.active, .nav-menu li a:hover {
-  color: white !important;
+  color: #F0EDEE !important;
   transition: 0, 5s;
 }
 
@@ -93,19 +103,19 @@ html {
   cursor: pointer;
 }
 
-.main, .mainCm, .mainDiseñoGrafico, .mainDiseñoWeb {
-  background-image: url("../multimedia/showing-tablet-s-blank-screen (1).jpg");
+.main {
+  background-image: url("../multimedia/fondoIndexFoto.png");
   background-position: left;
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  height: auto;
-  background-color: #5000F5;
+  height: 600px;
+  width: 100%;
+  background-color: #F0EDEE;
 }
-.main h1, .mainCm h1, .mainDiseñoGrafico h1, .mainDiseñoWeb h1 {
-  font-size: 25px;
+.main h1 {
+  font-size: 50px;
   font-family: "Baloo 2", cursive;
-  color: white;
+  color: #F0EDEE;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -114,26 +124,26 @@ html {
   padding-right: 20px;
   padding-left: 20px;
 }
-.main div, .mainCm div, .mainDiseñoGrafico div, .mainDiseñoWeb div {
+.main div {
   display: flex;
   justify-content: center;
   padding-top: 10px;
 }
-.main .logoTitulo, .mainCm .logoTitulo, .mainDiseñoGrafico .logoTitulo, .mainDiseñoWeb .logoTitulo {
+.main .logoTitulo {
   margin-top: 80px;
   height: 120px;
   width: auto;
 }
-.main .boxParrafo, .mainCm .boxParrafo, .mainDiseñoGrafico .boxParrafo, .mainDiseñoWeb .boxParrafo {
+.main .boxParrafo {
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
 }
-.main p, .mainCm p, .mainDiseñoGrafico p, .mainDiseñoWeb p {
-  font-size: 16px;
+.main p {
+  font-size: 20px;
   font-family: "Baloo 2", cursive;
   text-align: center !important;
-  color: white !important;
+  color: #F0EDEE !important;
   width: 100%;
   padding-left: 40px;
   padding-right: 40px;
@@ -141,134 +151,345 @@ html {
 }
 
 .mainDiseñoWeb {
-  background-image: url("../multimedia/ideas-concept-on-laptop-screen.jpg");
+  background-image: url("../multimedia/fotoMainDw.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+  width: 100%;
+}
+.mainDiseñoWeb .bg {
+  background-image: url("../multimedia/dwMainCenter.png");
+  height: 550px;
+  width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.mainDiseñoWeb h1 {
+  font-size: 60px !important;
+  font-family: "Baloo 2", cursive;
+  color: #FDBE2D;
+  text-align: left;
+  text-shadow: 2px 2px 1px black;
+  padding-top: 50px !important;
+  padding-left: 58px;
 }
 .mainDiseñoWeb p {
-  padding-bottom: 40px;
+  font-size: 22px;
+  font-family: "Baloo 2";
+  text-align: left;
+  line-height: 20px;
+  padding-right: 45px;
+  padding-left: 60px;
+  color: #F0EDEE;
 }
 
 .mainDiseñoGrafico {
-  background-image: url("../multimedia/man-editing-photos-on-computer.jpg");
+  background-image: url("../multimedia/fotoMainDg.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
+.mainDiseñoGrafico h1 {
+  font-size: 60px;
+  font-family: "Baloo 2", cursive;
+  color: #FDBE2D;
+  text-align: center;
+  line-height: 65px;
+  text-shadow: 2px 2px 1px black;
+  padding-top: 50px !important;
 }
 .mainDiseñoGrafico p {
-  padding-bottom: 40px;
+  font-size: 22px;
+  font-family: "Baloo 2";
+  text-align: center;
+  line-height: 20px;
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: #F0EDEE;
 }
 
+.mainPh {
+  background-color: #0A090C;
+}
+.mainPh h1 {
+  font-size: 55px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 25px;
+  color: #FDBE2D;
+}
+.mainPh p {
+  font-size: 22px;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-right: 45px;
+  padding-left: 45px;
+  color: #F0EDEE;
+}
+.mainPh .slider {
+  width: 75%;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+.mainPh .slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 20s infinite alternate ease-in-out;
+}
+.mainPh .slider li {
+  width: 100%;
+}
+.mainPh .slider img {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0%;
+  }
+  20% {
+    margin-left: 0%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
 .mainCm {
-  background-image: none;
+  background-color: #0A090C;
 }
 .mainCm h1 {
-  padding-top: 40px;
+  font-size: 55px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 80px;
+  color: #FDBE2D;
 }
 .mainCm p {
+  font-size: 22px;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: #F0EDEE;
 }
 
-.servicios {
-  height: auto;
+.nuestrosServicios {
+  background-color: #0A090C;
+}
+.nuestrosServicios h2 {
+  font-size: 50px;
+  font-family: "Baloo 2", cursive;
+  color: #FDBE2D;
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+.nuestrosServicios p {
+  font-size: 24px;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+  color: #F0EDEE !important;
+  padding: 40px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.nuestrosServicios .servicios {
+  height: 1200px;
   width: 100%;
-  background-color: #5000F5;
-  font-size: 20px;
+  background-color: #F0EDEE;
+  background-size: cover;
+  background-position: top;
+  font-size: 30px;
   font-family: "Baloo 2", cursive;
   font: bold;
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 90px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  grid-auto-rows: 220px;
+  padding-top: 150px;
 }
-.servicios .botones {
-  background-color: #FDBE2D;
+.nuestrosServicios .servicios .botones {
+  width: 400px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000;
-  margin: 10px 30px;
+  color: #0A090C;
+  margin: 0 auto;
   border-radius: 10px;
   filter: opacity(90%);
 }
-.servicios .botones:hover {
-  transform: scale(101%);
+.nuestrosServicios .servicios a {
+  color: #0A090C;
+}
+.nuestrosServicios .servicios .botones:hover {
+  transform: scale(108%);
+  transition: all 500ms;
   filter: none;
 }
+.nuestrosServicios .servicios .dwBg {
+  background-image: url("../multimedia/botonUno.png");
+  background-position: center;
+  background-size: cover;
+}
+.nuestrosServicios .servicios .dgBg {
+  background-image: url("../multimedia/botonDos.png");
+  background-position: center;
+  background-size: cover;
+}
+.nuestrosServicios .servicios .cmBg {
+  background-image: url("../multimedia/botonTres.png");
+  background-position: center;
+  background-size: cover;
+}
+.nuestrosServicios .servicios .phBg {
+  background-image: url("../multimedia/botonCuatro.png");
+  background-position: center;
+  background-size: cover;
+}
 
-.servicioDiseñoWeb h1 {
+.servicioDiseñoWeb {
+  background-color: #F0EDEE;
+  padding-top: 100px;
+  width: 100%;
+}
+.servicioDiseñoWeb h2 {
+  font-size: 48px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: center;
+  color: #5000F5;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.servicioDiseñoWeb .serviciosDiseñoWeb {
+  background-color: #F0EDEE;
+  color: #F0EDEE;
+  width: 100%;
+  padding-top: 80px;
+}
+.servicioDiseñoWeb .serviciosDiseñoWeb .boxServiciosWeb {
+  display: flex;
+  height: 180px;
+  color: #F0EDEE;
+  background-color: #F0EDEE;
+}
+.servicioDiseñoWeb .serviciosDiseñoWeb .infoWeb {
+  width: 60%;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.servicioDiseñoWeb .serviciosDiseñoWeb .boxLogos {
+  width: 40%;
+  padding-left: 60px;
+  padding-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.servicioDiseñoWeb .serviciosDiseñoWeb .logosServiciosWeb {
+  width: 75px;
+  height: auto;
+  float: right;
+  padding-right: 12px;
+}
+.servicioDiseñoWeb .serviciosDiseñoWeb .tamaño {
+  width: 110px;
+  height: auto;
+}
+.servicioDiseñoWeb .serviciosDiseñoWeb h3 {
   font-size: 24px;
   font-family: "Baloo 2", cursive;
   font-weight: bold;
-  text-align: center;
-  padding: 40px;
-  background-color: #5000F5;
-  color: #FDBE2D;
-}
-.servicioDiseñoWeb .serviciosDiseñoWeb {
-  background-color: #5000F5;
-  color: #FDBE2D;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 90px;
-  padding: 30px;
-}
-.servicioDiseñoWeb .serviciosDiseñoWeb h2 {
-  font-size: 20px;
-  font-family: "Baloo 2", cursive;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  padding-top: 25px;
+  text-align: left;
+  color: #0A090C;
 }
 .servicioDiseñoWeb .serviciosDiseñoWeb p {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Baloo 2", cursive;
-  text-align: right;
-  text-align: center;
-  padding-bottom: 50px;
+  text-align: left;
+  color: #5000F5;
 }
 
 .servicioDiseñoGrafico {
-  background-color: #5000F5;
+  background-image: url("../multimedia/fondoDiseñoGrafico.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 .servicioDiseñoGrafico .serviciosDiseñoGrafico {
-  background-color: #5000F5;
-  color: #FDBE2D;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 90px;
-  padding: 30px;
+  background-color: #0A090C !important;
+  height: 400px;
+  width: 100%;
+  color: #F0EDEE !important;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 50px !important;
 }
 .servicioDiseñoGrafico .serviciosDiseñoGrafico h2 {
-  font-size: 20px;
+  font-size: 50px !important;
   font-family: "Baloo 2", cursive;
   font-weight: bold;
   text-align: center;
-  padding: 10px;
-  padding-top: 25px;
+  line-height: 60px;
+  padding-top: 10px;
+  padding-right: 40px;
 }
 .servicioDiseñoGrafico .serviciosDiseñoGrafico p {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Baloo 2", cursive;
-  text-align: right;
-  text-align: center;
-  padding-bottom: 50px;
+  text-align: left;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 15px;
 }
 
 .servicioCm {
-  background-image: url("../multimedia/people-holding-social-media-icons.jpg");
+  background-image: url("../multimedia/fotoMainCm.jpg");
   background-position: center;
   background-size: cover;
-  padding-top: 300px;
+  background-attachment: fixed;
+  padding-top: 200px;
 }
 .servicioCm .serviciosCm {
-  color: white !important;
+  color: #F0EDEE !important;
   background-color: #5000F5;
   opacity: 80%;
-  padding: 30px;
-  height: 300px;
+  padding: 40px;
+  height: 400px;
   width: 100%;
 }
 .servicioCm .serviciosCm h2 {
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Baloo 2", cursive;
   font-weight: bold;
   text-align: center;
@@ -276,97 +497,479 @@ html {
   padding-top: 25px;
 }
 .servicioCm .serviciosCm p {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Baloo 2", cursive;
   text-align: center;
+  padding-top: 0px;
   padding-bottom: 50px;
+}
+.servicioCm .serviciosCm li {
+  font-size: 20px;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
 }
 
 .servicioPh {
-  background-image: url("../multimedia/young-female-product-photographer-in-studio.jpg");
-  background-position: center;
-  background-size: cover;
-  padding-top: 300px;
+  background-image: url("../multimedia/fotografos.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 600px;
 }
 .servicioPh .serviciosPh {
-  color: white !important;
-  background-color: #5000F5;
-  opacity: 80%;
-  padding: 30px;
-  height: 300px;
+  height: 400px;
   width: 100%;
 }
 .servicioPh .serviciosPh h2 {
-  font-size: 20px;
+  font-size: 36px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: right;
+  padding-top: 80px;
+  padding-right: 60px;
+  color: #0A090C !important;
+  text-shadow: 1px 1px 2px white;
+}
+.servicioPh .serviciosPh ul {
+  font-family: "Baloo 2", cursive;
+  text-align: right;
+  padding-top: 50px;
+  padding-right: 60px;
+  color: #0A090C !important;
+  text-shadow: 1px 1px 1px white;
+}
+.servicioPh .serviciosPh ul h3 {
+  font-size: 30px;
+  padding-bottom: 16px;
+}
+.servicioPh .serviciosPh ul li {
+  font-size: 21px;
+}
+
+.mantenimientoWeb {
+  background-color: #5000F5;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+.mantenimientoWeb h2 {
+  font-size: 46px;
   font-family: "Baloo 2", cursive;
   font-weight: bold;
   text-align: center;
   padding: 10px;
   padding-top: 25px;
+  color: #F0EDEE;
 }
-.servicioPh .serviciosPh p {
-  font-size: 18px;
-  font-family: "Baloo 2", cursive;
-  text-align: center;
-  padding-bottom: 50px;
-}
-
-.consultas h2 {
-  font-size: 24px;
+.mantenimientoWeb h3 {
+  font-size: 35px;
   font-family: "Baloo 2", cursive;
   font-weight: bold;
-  color: white;
-  background-color: #5000F5;
+  text-align: center;
+  padding: 10px;
+  padding-top: 5px;
+  color: #FDBE2D;
+}
+.mantenimientoWeb h4 {
+  font-size: 32px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  color: #FDBE2D;
+}
+.mantenimientoWeb p {
+  font-size: 22px;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-bottom: 100px;
+  color: #78C0E0;
+}
+.mantenimientoWeb .boxLista {
   display: flex;
   justify-content: center;
-  padding-top: 16px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+.mantenimientoWeb li {
+  font-size: 20px;
+  font-family: "Baloo 2", cursive;
+  text-align: left;
+  padding: 10px;
+  color: #78C0E0;
+}
+
+.planesCm {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #5000F5;
+  justify-content: center;
+  padding: 35px;
+  width: 100%;
+}
+.planesCm .tituloPlanesCm {
+  font-size: 42px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  padding-top: 15px;
+  color: #F0EDEE;
+}
+.planesCm .boxPlanesCm {
+  width: 100%;
+}
+.planesCm .estilosCm {
+  width: 250px;
+  height: 650px;
+  background-color: #0A090C;
+  margin: 30px;
+  border-radius: 12px;
+  filter: opacity(90%);
+}
+.planesCm .estilosCm h2 {
+  text-align: center;
+  font-size: 32px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  color: #FDBE2D;
+}
+.planesCm .estilosCm p {
+  text-align: center;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 16px;
+  font-family: "Baloo 2", cursive;
+}
+.planesCm .estilosCm ol {
+  text-align: left;
+}
+.planesCm .estilosCm li {
+  font-size: 17px;
+  font-family: "Baloo 2", cursive;
+  line-height: 22px;
+  color: #F0EDEE;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.planesCm .estilosCm .infoPlan {
+  display: flex;
+  justify-content: center;
+}
+.planesCm .estilosCm a {
+  font-size: 16px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  background-color: #FDBE2D;
+  border-radius: 14px;
+  width: 110px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: opacity(90%);
+  box-shadow: 2px 2px 6px black;
+}
+.planesCm .estilosCm a:hover {
+  background-color: #F0EDEE;
+}
+.planesCm .estilosCm .presupuesto {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+.planesCm .estilosCm:hover {
+  transform: translateY(-1%);
+  transition: all 500ms;
+  background-color: #5000F5;
+  color: #FDBE2D !important;
+  border: 3px solid;
+  border-color: #FDBE2D;
+  filter: none;
+}
+
+.publicidadRedes .bgFotoPublicidad {
+  background-image: url("../multimedia/fotoPublicidadenRedes.jpg");
+  height: 100%;
+}
+.publicidadRedes .bgFotoPublicidad .tituloPublicidad {
+  font-size: 36px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  padding-top: 150px;
+  color: #F0EDEE;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+.publicidadRedes .bgFotoPublicidad p {
+  font-size: 20px;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 100px;
+  color: #F0EDEE;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.bgFotoPublicidad:hover {
+  background-image: url("../multimedia/fotoPublicidadenRedesHover.jpg");
+  transition: all 2s;
+}
+.bgFotoPublicidad:hover .tituloPublicidad {
+  color: #FDBE2D;
+  transition: all 2s;
+}
+.bgFotoPublicidad:hover p {
+  font-size: 21px;
+  transition: all 3s;
+}
+
+.paginasWeb {
+  background-image: url("../multimedia/fondoPaginasWeb.png") !important;
+  background-position: left -20px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #F0EDEE;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 35px;
+  padding-top: 50px;
+}
+.paginasWeb .boxPaginasTitulo {
+  width: 100%;
+}
+.paginasWeb .tituloPaginasWeb {
+  font-size: 44px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 50px;
+  color: #F0EDEE;
+}
+.paginasWeb .párrafoPaginasWeb {
+  font-size: 30px;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+  color: #FDBE2D;
+}
+.paginasWeb .bgLandingPage {
+  background-image: url("../multimedia/tarjetaOne.png");
+  background-repeat: no-repeat;
+}
+.paginasWeb .bgEconomica {
+  background-image: url("../multimedia/tarjetaEconomico.png");
+  background-repeat: no-repeat;
+}
+.paginasWeb .bgPersonalizada {
+  background-image: url("../multimedia/tarjetaPersonalizada.png");
+  background-repeat: no-repeat;
+}
+.paginasWeb .estilosWeb {
+  width: 250px;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  margin: 30px;
+  border-radius: 12px;
+  filter: opacity(90%);
+}
+.paginasWeb .estilosWeb h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+.paginasWeb .estilosWeb p {
+  text-align: center;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 16px;
+  font-family: "Baloo 2", cursive;
+}
+.paginasWeb .estilosWeb h3 {
+  text-align: center;
+  padding-top: 26px;
+  padding-bottom: 12px;
+  font-size: 18px;
+  font-family: "Baloo 2", cursive;
+  line-height: 20px;
+}
+.paginasWeb .estilosWeb ol {
+  text-align: left;
+}
+.paginasWeb .estilosWeb li {
+  font-size: 17px;
+  font-family: "Baloo 2", cursive;
+  line-height: 24px;
+}
+.paginasWeb .estilosWeb .infoPlan {
+  display: flex;
+  justify-content: center;
+}
+.paginasWeb .estilosWeb a {
+  font-size: 16px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  background-color: #FDBE2D;
+  color: #0A090C;
+  border-radius: 14px;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: opacity(90%);
+  box-shadow: 2px 2px 10px black;
+}
+.paginasWeb .estilosWeb .presupuesto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 28px;
+}
+.paginasWeb .estilosWeb a:hover {
+  background-color: #F0EDEE;
+}
+.paginasWeb .estilosWeb:hover {
+  transform: translateY(-1%);
+  transition: all 0.2s;
+  background-color: #5000F5;
+  color: #0A090C !important;
+  filter: none;
+  box-shadow: 2px 2px 10px black;
+}
+
+.consultas {
+  background-image: url("../multimedia/fondo_Contacto.png");
+  background-position: top;
+  background-size: cover;
+  background-color: #F0EDEE;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.consultas h2 {
+  font-size: 40px;
+  font-family: "Baloo 2", cursive;
+  font-weight: bold;
+  text-align: center;
+  color: #0A090C;
+  padding-top: 100px;
+  line-height: 40px;
+}
+.consultas p {
+  font-size: 21px;
+  font-family: "Baloo 2", cursive;
+  text-align: center;
+  color: #5000F5;
+  padding: 5px;
+  padding-top: 18px;
+  line-height: 25px;
+  font-weight: bold;
 }
 .consultas .formulario {
   display: flex;
   justify-content: center;
-  font-family: "Baloo 2", cursive;
-  text-align: left;
-  color: #FDBE2D;
-  background-color: #5000F5;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+.consultas form {
+  width: 70%;
+  font-family: "Baloo 2", cursive;
+  text-align: left;
+  font-size: 16px;
+  color: #5000F5;
+  background-color: #0A090C;
+  padding: 15px;
+  border-radius: 10px;
+}
+.consultas input {
+  outline: none;
+  font-family: "Baloo 2", cursive;
+}
+.consultas textarea {
+  resize: none;
+  outline: none;
+  font-family: "Baloo 2", cursive;
 }
 .consultas .form {
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 6px;
+  width: 100%;
+}
+.consultas .botonForm {
+  width: 100%;
+  height: 46px;
+  background-color: #5000F5;
+  color: #F0EDEE;
+  text-transform: uppercase;
+  border-radius: 10px;
 }
 
 .contacto {
   display: flex;
   flex-direction: column;
+  background-color: #F0EDEE !important;
 }
 .contacto h2 {
-  font-size: 24px;
+  font-size: 40px;
   font-family: "Baloo 2", cursive;
   font-weight: bold;
-  color: white;
-  background-color: #5000F5;
+  color: #0A090C;
+  background-color: #F0EDEE;
   display: flex;
   justify-content: center;
   padding: 10px;
+  padding-top: 100px;
 }
 .contacto .contactos {
   padding: 5px;
+  padding-top: 5px;
   font-family: "Baloo 2", cursive;
   text-align: left;
   color: #FDBE2D;
-  background-color: #5000F5;
+  background-color: #F0EDEE;
 }
 .contacto .tel-mail {
   display: flex;
   justify-content: center;
-  color: #FDBE2D;
+  color: #0A090C;
   font-size: 17px;
   margin-bottom: 8px;
 }
+.contacto .tel-mail:hover {
+  color: #78C0E0;
+}
+.contacto .boxIconoContacto {
+  display: flex;
+  justify-content: center;
+}
+.contacto .iconoContacto {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  width: 300px;
+}
 
 .botonWhatsapp {
-  background-color: #5000F5;
+  background-color: #F0EDEE;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,15 +980,18 @@ html {
   align-items: center;
   font-size: 16px;
   font-family: "Baloo 2", cursive;
-  color: white;
+  color: #F0EDEE;
   background-color: rgb(16, 231, 16);
   width: 250px;
   border-radius: 20px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 70px;
 }
+.botonWhatsapp .call:hover {
+  background-color: #0A090C;
+}
 .botonWhatsapp a {
-  color: white;
+  color: #F0EDEE;
   padding: 6px;
 }
 .botonWhatsapp i {
@@ -400,9 +1006,8 @@ html {
   align-items: center;
   bottom: 20px;
   right: 20px;
-  color: #5000F5;
-  height: 22px;
-  width: 22px;
+  height: 30px;
+  width: 30px;
   background-color: #FDBE2D;
   border-radius: 50%;
   font-size: 20px;
@@ -410,9 +1015,10 @@ html {
 }
 
 .footer {
-  background-color: #000;
-  font-size: 14px;
+  background-color: #0A090C;
+  font-size: 15px;
   height: 120px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -420,12 +1026,13 @@ html {
 .footer .redes {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 .footer a {
   color: #FDBE2D;
-  font-size: 16px;
-  padding-right: 10px;
-  padding-left: 10px;
+  font-size: 20px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 .footer i:hover {
   transform: scale(1.15);
@@ -435,9 +1042,7 @@ html {
   color: #FDBE2D;
   display: flex;
   justify-content: center;
-}
-.footer .copy {
-  margin-top: 20px;
+  padding-bottom: 8px;
 }
 
 @media (min-width: 1024px) {
@@ -445,16 +1050,28 @@ html {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px auto auto auto 120px;
-    grid-template-areas: "header header" "main main" "servicios servicios" "consultas contacto" "footer footer";
+    grid-template-rows: 120px auto auto auto auto auto 120px;
+    grid-template-areas: "header header" "main main" "estilos estilos" "servicios servicios" "mantenimiento mantenimiento" "consultas contacto" "footer footer";
   }
   .header {
     grid-area: header;
   }
-  .main, .mainDiseñoWeb, .mainDiseñoGrafico, .mainCm {
+  .main {
     grid-area: main;
   }
-  .servicios {
+  .mainDiseñoWeb {
+    grid-area: main;
+  }
+  .mainCm {
+    grid-area: main;
+  }
+  .mainPh {
+    grid-area: main;
+  }
+  .mainDiseñoGrafico {
+    grid-area: main;
+  }
+  .nuestrosServicios {
     grid-area: servicios;
   }
   .servicioDiseñoWeb {
@@ -464,9 +1081,21 @@ html {
     grid-area: servicios;
   }
   .servicioCm {
-    grid-area: servicios;
+    grid-area: estilos;
   }
   .servicioPh {
+    grid-area: servicios;
+  }
+  .mantenimientoWeb {
+    grid-area: mantenimiento;
+  }
+  .publicidadRedes {
+    grid-area: mantenimiento;
+  }
+  .paginasWeb {
+    grid-area: estilos;
+  }
+  .planesCm {
     grid-area: servicios;
   }
   .consultas {
@@ -511,15 +1140,47 @@ html {
     text-transform: uppercase;
     color: #FDBE2D !important;
   }
-  .main p, .mainDiseñoWeb p, .mainDiseñoGrafico p, .mainCm p {
-    font-size: 18px;
+  .main h1 {
+    font-size: 56px;
     font-family: "Baloo 2", cursive;
-    text-align: justify;
-    color: #FDBE2D;
+    color: #F0EDEE;
     display: flex;
-    justify-content: center;
-    padding-right: 200px;
-    padding-left: 200px;
+    justify-content: end;
+    margin-top: 20px;
+    text-shadow: 2px 2px 1px black;
+    padding-right: 100px;
+    padding-left: 20px;
+  }
+  .main div {
+    display: flex;
+    justify-content: end;
+    padding-top: 10px;
+    padding-right: 80px;
+  }
+  .main .boxLogoTecbis {
+    display: flex;
+    justify-content: end;
+    padding-top: 10px;
+    padding-right: 350px;
+  }
+  .main .logoTitulo {
+    margin-top: 80px;
+    height: 120px;
+    width: auto;
+  }
+  .main .boxParrafo {
+    display: flex;
+    padding-bottom: 50px;
+  }
+  .main p {
+    font-size: 22px;
+    font-family: "Baloo 2", cursive;
+    text-align: right !important;
+    color: #F0EDEE !important;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+    text-shadow: 2px 2px 1px black;
   }
   .contacto {
     background-color: #5000F5;
@@ -529,24 +1190,14 @@ html {
   }
   .servicios {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 90px 90px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .servicios .botones {
-    background-color: #FDBE2D;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    margin: 10px 30px;
-    border-radius: 10px;
-    filter: opacity(90%);
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 220px;
+    padding: 120px;
+    height: 700px !important;
   }
   .botonArriba {
-    height: 30px;
-    width: 30px;
+    height: 42px;
+    width: 42px;
   }
   .footer {
     font-size: 15px;
@@ -554,38 +1205,32 @@ html {
   .footer a {
     font-size: 20px;
   }
-  .servicioDiseñoWeb h1 {
+  .mainDiseñoWeb h1 {
+    font-size: 65px;
+    padding-left: 200px !important;
+    padding-top: 30px !important;
+  }
+  .mainDiseñoWeb p {
     font-size: 30px;
-    font-family: "Baloo 2", cursive;
-    font-weight: bold;
-    text-align: center;
-    padding: 100px;
-    background-color: #5000F5;
-    color: #FDBE2D;
-    display: flex;
-    justify-content: center;
+    line-height: 30px;
+    padding-left: 200px !important;
   }
-  .servicioDiseñoWeb .serviciosDiseñoWeb {
-    background-color: #5000F5;
-    color: #FDBE2D;
+  .serviciosDiseñoWeb {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 200px;
-    padding: 30px;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 350px;
   }
-  .servicioDiseñoWeb .serviciosDiseñoWeb h2 {
-    font-size: 20px;
+  .serviciosDiseñoWeb .boxServiciosWeb .infoWeb h3 {
+    font-size: 36px;
     font-family: "Baloo 2", cursive;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 25px;
+    text-align: left;
+    padding-top: 15px;
   }
-  .servicioDiseñoWeb .serviciosDiseñoWeb p {
-    font-size: 18px;
+  .serviciosDiseñoWeb .boxServiciosWeb .infoWeb p {
+    font-size: 19px;
     font-family: "Baloo 2", cursive;
-    text-align: left !important;
-    text-align: center;
-    padding-right: 300px;
+    text-align: left;
+    padding-right: 150px;
   }
   .servicioDiseñoGrafico {
     background-color: #5000F5;
@@ -617,6 +1262,12 @@ html {
     padding-right: 300px;
     display: flex;
     align-items: center;
+  }
+  .mantenimientoWeb {
+    color: #FDBE2D !important;
+    background-color: #5000F5;
+    padding-top: 50px;
+    padding-bottom: 180px;
   }
 }
 

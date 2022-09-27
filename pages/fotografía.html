@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ofrecemos el servicio de fotografía profesional e información de contacto">
     <meta name="keywords" content="profesional fotos, sesiones de fotos profesionales, fotografo de producto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../multimedia/logotipo_perfil.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/484fb7870b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css">
@@ -16,7 +20,7 @@
         <header class="header" id="arriba">
             <nav>
                 <div>
-                    <img src="../multimedia/tecbis_logo2.png" alt="logo_tecbis" class="logo">
+                    <a href="../index.html"><img src="../multimedia/tecbis_logo2.png" alt="isotipoTecbis" class="logo"></a>
                 </div>
                 <input type="checkbox" id="check">
                 <label for="check" class="bar-btn">
@@ -33,19 +37,57 @@
                 </div>
             </nav>
         </header>
-        <main class="mainCm">
+        <main class="mainPh">
             <h1>Fotografía</h1>
             <p> 
-                La percepción que tiene un usuario de un determinado producto o servicio depende de la calidad de su imagen.
+                La percepción de sus clientes
+                sobre su producto o servicio <br>
+                depende de la calidad de su imagen.
             </p>
+            <div class="slider">
+                <ul>
+                    <li><img src="../multimedia/fotoDesayuno.jpg" alt="fotografiaDesayuno"></li>
+                    <li><img src="../multimedia/fotoMaqueta.jpg" alt="fotografiaMaqueta"></li>
+                    <li><img src="../multimedia/fotoPicada.jpg" alt="fotografiaPicada"></li>
+                    <li><img src="../multimedia/fotoSteal.jpg" alt="fotografiaConstruccion"></li>
+                </ul>
+            </div>    
         </main>
         <section class="servicioPh">
             <div class="serviciosPh">
-                <h2>Contamos con Profesionales en</h2>
-                <p>
-                    fotografía de Producto en estudio, exterior, gastronómicas y de servicios.
-                </p>
+                <h2>Contamos con <br>
+                    Fotógrafos Profesionales
+                </h2>
+                <ul>
+                    <h3>Especializados en <br>
+                        Fotografía</h3>
+
+                    <li>✓ de Producto</li>
+                    <li>✓ en Estudio o Exterior</li>
+                    <li>✓ Gastronómica y de Servicios</li>
+                </ul>
             </div>
+        </section>
+        <section class="consultas">
+            <h2>Contrate <br>
+                Nuestros Servicios</h2>
+            <p>
+                Complete el siguiente formulario <br>
+                y nos ponemos en contacto
+            </p>
+            <div class="formulario">
+            <form action="../envia.php" method="post" id="19533807_formulario">
+                <label for="Nombre"></label>
+                <input type="text" name="nombre" required class="form" placeholder="Nombre y Apellido">
+                <label for="E-mail"></label>
+                <input type="text" name="correo" required class="form" placeholder="E-mail">
+                <label for="Teléfono"></label>
+                <input type="tel" name="telefono" required class="form" placeholder="Teléfono / Whatsapp">
+                <label for="Mensaje"></label> 
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Consulta" class="form"></textarea>
+                <input type="submit" class="botonForm">
+            </form>  
+            </div>  
         </section>
         <section class="contacto">
             <h2>Contacto</h2>
@@ -57,38 +99,21 @@
                 <div class="call">
                     <i class="fa-brands fa-whatsapp"></i>
                     <a href="https://api.whatsapp.com/send?phone=3435025077&text=TecBis" target="_blank">
-                    Consultanos
+                    ¿Cómo podemos ayudarte?
                     </a>
                 </div> 
             </section>
-        </section>
-        <section class="consultas">
-            <h2>Envianos tu Consulta</h2>
-            <div class="formulario">
-            <form>
-                <label for="Nombre">Nombre</label>
-                <input type="text" name="Nombre" required class="form"><br> 
-                <label for="Apellido">Apellido</label>
-                <input type="text" name="Apellido" required class="form"><br>
-                <label for="E-mail">E-mail</label>
-                <input type="email" name="E-mail" required class="form"><br>
-                <label for="Teléfono">Teléfono</label>
-                <input type="tel" name="Teléfono" required class="form"><br>
-                <label for="Mensaje">Mensaje</label> 
-                <br><textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Tu Consulta Aqui"></textarea><br>
-                <input type="submit">
-                <input type="reset">
-                </form>  
-            </div>  
+            <div class="boxIconoContacto">
+                <img src="../multimedia/iconoContactos.png" alt="imagenContacto" class="iconoContacto">
+            </div>
         </section>
         <a href="#arriba" class="botonArriba"><i class="fa-sharp fa-solid fa-angle-up"></i></a>
         <footer class="footer">
-            <div class="textoFooter">Seguinos!</div>
             <div class="redes">
                 <a href="https://www.instagram.com/somostecbis/" target="_blank"><i class="fa-brands fa-instagram"></i></a>     
                 <a href="https://www.facebook.com/somostecbis" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
-            <div class="textoFooter copy">© Copyright TECBIS 2022</div>
+            <div class="textoFooter">© Copyright TECBIS 2022</div>
         </footer>
     </section>
 </body>

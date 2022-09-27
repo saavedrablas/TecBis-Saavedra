@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Presentación de Tecbis, que servicios se ofrecen y contacto">
     <meta name="keywords" content="paginas html, páginas, sitios web, grafico publicitario, diseño grafico minimalista, estudio grafico, diseño de la comunicacion visual, community manager, fotografia de, foto de color, foto color">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./multimedia/logotipo_perfil.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/484fb7870b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/estilos.css">
@@ -16,7 +20,9 @@
         <header class="header" id="arriba">
             <nav>
             <div>
-                <img src="./multimedia/tecbis_logo2.png" alt="logo_tecbis" class="logo">
+                <a href="#">
+                    <img src="./multimedia/tecbis_logo2.png" alt="isotipoTecbis" class="logo">
+                </a>
             </div>
             <input type="checkbox" id="check">
             <label for="check" class="bar-btn">
@@ -34,23 +40,47 @@
             </nav>
         </header>
         <main class="main">
-            <div>
-                <img src="./multimedia/tecbis_logotipo2.png" alt="logoTecbis" class="logoTitulo">
+            <div class="boxLogoTecbis">
+                <a href="#"><img src="./multimedia/tecbis_logotipo2.png" alt="logotipoTecbis" class="logoTitulo"></a>
             </div>
             <h1>Tus Ideas En Movimiento</h1>
             <div class="boxParrafo">
-            <p>Empresa compuesta por profesionales independientes dedicados al desarrollo web, diseño gráfico, fotografía y redes sociales. 
-            Nos comprometemos exclusivamente a que las ideas para tu negocio se hagan realidad.
-            </p>
-        </div>
+            <p>Empresa compuesta por profesionales independientes <br>
+            dedicados al desarrollo web, diseño gráfico, fotografía y redes sociales. </p>
             </div> 
         </main>
-        <section class="servicios">
-            <div class="botones"><a href="./pages/diseño_web.html">Diseño Web</a></div>
-            <div class="botones"><a href="./pages/diseño_gráfico.html">Diseño Gráfico</a></div>
-            <div class="botones"><a href="./pages/community_manager.html">Community Manager</a></div>
-            <div class="botones"><a href="./pages/fotografía.html">Fotografía</a></div>
+        <section class="nuestrosServicios">
+            <p>Nos comprometemos a que las ideas <br>
+                para su negocio se hagan realidad</p>
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios">
+                <div class="botones dwBg"><a href="./pages/diseño_web.html">Diseño Web</a></div>
+                <div class="botones dgBg"><a href="./pages/diseño_gráfico.html">Diseño Gráfico</a></div>
+                <div class="botones cmBg"><a href="./pages/community_manager.html">Community Manager</a></div>
+                <div class="botones phBg"><a href="./pages/fotografía.html">Fotografía</a></div>
+            </div>
         </section>   
+        <section class="consultas">
+            <h2>Contrate <br>
+                Nuestros Servicios</h2>
+            <p>
+                Complete el siguiente formulario <br>
+                y nos ponemos en contacto
+            </p>
+            <div class="formulario">
+            <form action="./envia.php" method="post" id="19533807_formulario">
+                <label for="Nombre"></label>
+                <input type="text" name="nombre" required class="form" placeholder="Nombre y Apellido">
+                <label for="E-mail"></label>
+                <input type="text" name="correo" required class="form" placeholder="E-mail">
+                <label for="Teléfono"></label>
+                <input type="tel" name="telefono" required class="form" placeholder="Teléfono / Whatsapp">
+                <label for="Mensaje"></label> 
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Consulta" class="form"></textarea>
+                <input type="submit" class="botonForm">
+            </form>  
+            </div>  
+        </section>
         <section class="contacto">
             <h2>Contacto</h2>
             <div class="contactos">
@@ -65,34 +95,17 @@
                     </a>
                 </div> 
             </section>
-        </section>
-        <section class="consultas">
-            <h2>Envianos tu Consulta</h2>
-            <div class="formulario">
-            <form>
-                <label for="Nombre">Nombre</label>
-                <input type="text" name="Nombre" required class="form"><br> 
-                <label for="Apellido">Apellido</label>
-                <input type="text" name="Apellido" required class="form"><br>
-                <label for="E-mail">E-mail</label>
-                <input type="email" name="E-mail" required class="form"><br>
-                <label for="Teléfono">Teléfono</label>
-                <input type="tel" name="Teléfono" required class="form"><br>
-                <label for="Mensaje">Mensaje</label> 
-                <br><textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Tu Consulta Aqui"></textarea><br>
-                <input type="submit">
-                <input type="reset">
-                </form>  
-            </div>  
+            <div class="boxIconoContacto">
+                <img src="./multimedia/iconoContactos.png" alt="imagenContacto" class="iconoContacto">
+            </div>
         </section>
         <a href="#arriba" class="botonArriba"><i class="fa-sharp fa-solid fa-angle-up"></i></a>
         <footer class="footer">
-            <div class="textoFooter">Seguinos!</div>
             <div class="redes">
                 <a href="https://www.instagram.com/somostecbis/" target="_blank"><i class="fa-brands fa-instagram"></i></a>     
                 <a href="https://www.facebook.com/somostecbis" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
-            <div class="textoFooter copy">© Copyright TECBIS 2022</div>
+            <div class="textoFooter">© Copyright TECBIS 2022</div>
         </footer>
     </section
 </body>

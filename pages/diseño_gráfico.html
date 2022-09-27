@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Todos los servicios que se abarcan desde el diseño gráfico e información de contacto">
     <meta name="keywords" content="logo 2021, tarifas de diseño grafico, diseño identidad corporativa, diseño de la comunicacion visual">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../multimedia/logotipo_perfil.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/484fb7870b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css">
@@ -16,7 +20,7 @@
         <header class="header" id="arriba">
             <nav>
                 <div>
-                    <img src="../multimedia/tecbis_logo2.png" alt="logo_tecbis" class="logo">
+                    <a href="../index.html"><img src="../multimedia/tecbis_logo2.png" alt="isotipoTecbis" class="logo"></a>
                 </div>
                 <input type="checkbox" id="check">
                 <label for="check" class="bar-btn">
@@ -34,38 +38,66 @@
             </nav>
         </header>
         <main class="mainDiseñoGrafico">
-            <h1>Diseño Gráfico</h1>
+            <div class="bgDiseñoGráfico">
+            <h1>Diseño <br>
+                Gráfico</h1>
             <p> 
-                Causa una buena impresión! Diseños gráficos para que su marca tenga una imagen profesional.        Personalizados, atractivos, simples y comprensibles.
+                Diseños gráficos para su marca. <br>
+                Tenga una imagen profesional, <br>
+                personalizada, atractiva, <br>
+                y comprensible.
             </p>
+            </div>
         </main>
         <section class="servicioDiseñoGrafico">
             <div class="serviciosDiseñoGrafico">
-                <h2>Identidad de Marca</h2>
+                <h2>Identidad <br>
+                    de Marca</h2>
                     <p>
-                        Diseñamos el logo de su empresa o proyecto, para que sus clientes identifiquen su marca.
+                        Diseñamos el logo de su negocio, para que sus clientes identifiquen su marca y se destaque de la competencia.
                     </p>
+            </div>  
+            <div class="serviciosDiseñoGrafico">
                 <h2>Papelería</h2>
-                    <p>
-                        Comunicación gráfica de su marca con la papeleria acorde.
-                    </p>
-                <h2>Cartelería</h2>
-                    <p>
-                        Cause una buena impresion a sus clientes cuando ingresen a su local.
-                    </p>
+                <p>
+                    Diseñamos todos los elementos de comunicación de su negocio. <br>
+                    La papelería corporativa es uno de los aspectos más importantes para su imagen. 
+                </p>
+            </div>         
+            <div class="serviciosDiseñoGrafico">
                 <h2>Impresiones</h2>
-                    <p>
-                        Deje en nuestras manos sus folletos, tarjetas, carpetas, vinilos, etiquetas, banner, afiches, lonas.
-                    </p>
-                <h2>Packaging</h2>
-                    <p>
-                        Diseño de packaging. 
-                    </p>
-                <h2>Redes Sociales</h2>
-                    <p>
-                        Diseños personalizados acorde a su imagen corporativa para las diferentes plataformas y redes sociales.
-                    </p>    
-            </div>
+                <p>
+                    Deje en nuestras manos sus folletos, tarjetas, carpetas, vinilos, etiquetas, banner, afiches, lonas, etc.
+                </p>
+            </div>        
+            <div class="serviciosDiseñoGrafico">
+                <h2>Redes <br>
+                    Sociales</h2>
+                <p>
+                    Diseños personalizados acorde a su imagen corporativa para las diferentes plataformas y redes sociales.
+                </p>
+            </div>      
+        </section>
+        <section class="consultas">
+            <h2>Contrate <br>
+                Nuestros Servicios</h2>
+            <p>
+                Complete el siguiente formulario <br>
+                y nos ponemos en contacto
+            </p>
+            <div class="formulario">
+            <form action="../envia.php" method="post" id="19533807_formulario">
+                <label for="Nombre"></label>
+                <input type="text" name="nombre" required class="form" placeholder="Nombre y Apellido">
+                <label for="E-mail"></label>
+                <input type="text" name="correo" required class="form" placeholder="E-mail">
+                <label for="Teléfono"></label>
+                <input type="tel" name="telefono" required class="form" placeholder="Teléfono / Whatsapp">
+                <label for="Mensaje"></label> 
+                <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Consulta" class="form"></textarea>
+                <input type="submit" class="botonForm">
+            </form>  
+            </div>  
         </section>
         <section class="contacto">
             <h2>Contacto</h2>
@@ -81,34 +113,17 @@
                     </a>
                 </div> 
             </section>
-        </section>
-        <section class="consultas">
-            <h2>Envianos tu Consulta</h2>
-            <div class="formulario">
-            <form>
-                <label for="Nombre">Nombre</label>
-                <input type="text" name="Nombre" required class="form"><br> 
-                <label for="Apellido">Apellido</label>
-                <input type="text" name="Apellido" required class="form"><br>
-                <label for="E-mail">E-mail</label>
-                <input type="email" name="E-mail" required class="form"><br>
-                <label for="Teléfono">Teléfono</label>
-                <input type="tel" name="Teléfono" required class="form"><br>
-                <label for="Mensaje">Mensaje</label> 
-                <br><textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Tu Consulta Aqui"></textarea><br>
-                <input type="submit">
-                <input type="reset">
-                </form>  
-            </div>  
+            <div class="boxIconoContacto">
+                <img src="../multimedia/iconoContactos.png" alt="imagenContacto" class="iconoContacto">
+            </div>
         </section>
         <a href="#arriba" class="botonArriba"><i class="fa-sharp fa-solid fa-angle-up"></i></a>
         <footer class="footer">
-            <div class="textoFooter">Seguinos!</div>
             <div class="redes">
                 <a href="https://www.instagram.com/somostecbis/" target="_blank"><i class="fa-brands fa-instagram"></i></a>     
                 <a href="https://www.facebook.com/somostecbis" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
-            <div class="textoFooter copy">© Copyright TECBIS 2022</div>
+            <div class="textoFooter">© Copyright TECBIS 2022</div>
         </footer>
     </section>
 </body>
